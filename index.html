@@ -84,13 +84,27 @@
             transform: translateY(-2px);
         }
         main {
-            max-width: 100%; /* Ubah max-width ke 100% */
-            margin: 0 auto; /* Hapus margin atas/bawah jika perlu */
-            padding: 20px; /* Tetap dengan padding yang sudah ada */
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
             background: #2c2c2c;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             overflow: hidden;
+            position: relative;
+            z-index: 0;
+        }
+        /* Menambahkan efek latar belakang untuk sisi */
+        main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Warna latar belakang */
+            border-radius: 8px;
+            z-index: -1;
         }
         p {
             line-height: 1.6;
