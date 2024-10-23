@@ -7,19 +7,23 @@ body, html {
     margin: 0;
 }
 
+/* Menghilangkan scroll dari halaman utama */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background: linear-gradient(to right, #ffe6cc, #ffccff);
-    color: #333;
+    background: radial-gradient(circle, #1e1e1e, #0b0b0b);
+    color: #ffffff;
     font-size: 20px;
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Menghilangkan scroll pada halaman */
 }
 
 header {
-    background: #ff99cc;
+    background: #282c34;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
 }
 
 .logo {
@@ -28,7 +32,7 @@ header {
     top: 10px;
     font-size: 26px;
     font-weight: bold;
-    color: #fff;
+    color: #00ffcc;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -44,21 +48,22 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s, transform 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffccff;
+    color: #00ffcc;
     transform: scale(1.1);
 }
 
+/* Scroll tetap bisa dilakukan di elemen main */
 main {
     padding: 20px;
     height: calc(100% - 60px);
-    overflow-y: auto;
+    overflow-y: auto; /* Tetap mengizinkan scroll di area main */
 }
 
 .flex-container {
@@ -99,13 +104,13 @@ h1 {
 
 h2 {
     font-size: 28px;
-    color: #ff66b2;
+    color: #00ffcc;
     font-family: 'Roboto', sans-serif;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-p, ul {
+p {
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -114,9 +119,14 @@ p, ul {
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #ff99cc;
-    color: #fff;
+    background: #282c34;
+    color: #ffffff;
     width: 100%;
     position: relative;
     bottom: 0;
+}
+
+/* Menghilangkan scrollbar tampilan di elemen main (Chrome, Safari, Opera) */
+main::-webkit-scrollbar {
+    display: none;
 }
