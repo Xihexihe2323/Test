@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Menghilangkan scroll dari halaman utama */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: radial-gradient(circle, #1e1e1e, #0b0b0b);
+    color: #ffffff;
+    font-size: 20px;
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Menghilangkan scroll pada halaman */
+}
+
+header {
+    background: #282c34;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #00ffcc;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ffcc;
+    transform: scale(1.1);
+}
+
+/* Scroll tetap bisa dilakukan di elemen main */
+main {
+    padding: 20px;
+    height: calc(100% - 60px);
+    overflow-y: auto; /* Tetap mengizinkan scroll di area main */
+}
+
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.text-content {
+    flex: 1;
+    margin-right: 20px;
+    max-width: 50%;
+}
+
+.image-content {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.image-content img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #00ffcc;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #282c34;
+    color: #ffffff;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+/* Menghilangkan scrollbar tampilan di elemen main (Chrome, Safari, Opera) */
+main::-webkit-scrollbar {
+    display: none;
+}
